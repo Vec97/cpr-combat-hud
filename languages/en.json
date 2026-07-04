@@ -7,6 +7,11 @@
   "CPR-CHUD.settings.scale.hint": "Overall size of the HUD bar.",
   "CPR-CHUD.settings.bottomOffset.name": "Distance from bottom (px)",
   "CPR-CHUD.settings.bottomOffset.hint": "How far above the bottom edge of the screen the HUD bar sits.",
+  "CPR-CHUD.settings.targetMode.name": "Choose target before attacking",
+  "CPR-CHUD.settings.targetMode.hint": "When you click Attack, first enter a targeting mode - the cursor shows 'Choose Target' and your next click on a token targets it before the roll. Esc or right-click cancels.",
+  "CPR-CHUD.settings.targetMode.off": "Off - roll immediately",
+  "CPR-CHUD.settings.targetMode.ifNone": "Only when nothing is targeted",
+  "CPR-CHUD.settings.targetMode.always": "Always ask for a target",
   "CPR-CHUD.keybindings.toggle.name": "Toggle Combat HUD",
   "CPR-CHUD.keybindings.toggle.hint": "Collapse or expand the combat HUD bar.",
 
@@ -53,6 +58,8 @@
   "CPR-CHUD.warn.noCombat": "No active combat encounter - start one first.",
   "CPR-CHUD.warn.notYourTurn": "It is not this combatant's turn.",
   "CPR-CHUD.warn.noNetGear": "No equipped cyberdeck or no active netrunning role configured.",
+
+  "CPR-CHUD.targeting.choose": "Choose Target",
 
   "CPR-CHUD.equipState.owned": "Owned",
   "CPR-CHUD.equipState.carried": "Carried",

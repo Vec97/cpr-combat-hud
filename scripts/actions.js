@@ -10,6 +10,7 @@ import CPRChat from "../../../systems/cyberpunk-red-core/modules/chat/cpr-chat.j
 import CPRSystemUtils from "../../../systems/cyberpunk-red-core/modules/utils/cpr-systemUtils.js";
 import * as CPRRolls from "../../../systems/cyberpunk-red-core/modules/rolls/cpr-rolls.js";
 import { SYSTEM_ID, FIRE_MODES, EQUIP_CYCLE } from "./constants.js";
+import { resolveAttackTarget } from "./targeting.js";
 
 /**
  * Some HUD actions are not triggered by a real mouse event (or we do not
@@ -122,6 +123,9 @@ export async function rollSkill(event, actor, skillId, tokenDoc) {
 export async function rollAttack(event, actor, weaponId, tokenDoc) {
   const weapon = actor.getOwnedItem(weaponId);
   if (!weapon) return;
+  // Optionally let the player pick a target first; abort if they cancel.
+  const proceed = await resolveAttackTarget();
+  if (!proceed) return;
   const fireMode = getFireMode(actor, weaponId);
   const cprRoll = weapon.createRoll(fireMode, actor);
   await executeCprRoll(event, actor, weapon, cprRoll, tokenDoc);

@@ -50,6 +50,20 @@ Hooks.once("init", () => {
     onChange: () => hud?.refresh(),
   });
 
+  game.settings.register(MODULE_ID, "targetMode", {
+    name: "CPR-CHUD.settings.targetMode.name",
+    hint: "CPR-CHUD.settings.targetMode.hint",
+    scope: "client",
+    config: true,
+    type: String,
+    choices: {
+      off: "CPR-CHUD.settings.targetMode.off",
+      ifNone: "CPR-CHUD.settings.targetMode.ifNone",
+      always: "CPR-CHUD.settings.targetMode.always",
+    },
+    default: "always",
+  });
+
   game.settings.register(MODULE_ID, "favsOpen", {
     scope: "client",
     config: false,
