@@ -63,4 +63,4 @@ Bug reports and suggestions are welcome on the [issue tracker](https://github.co
 
 ## License
 
-[MIT](LICENSE) © 2026 Tim Ache (Vec97)
+[MIT](LICENSE) © 2026 Vec97
