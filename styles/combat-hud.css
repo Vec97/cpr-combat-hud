@@ -802,6 +802,46 @@
 }
 
 /* --------------------------------------------------------------------------
+   "Choose Target" mode
+   -------------------------------------------------------------------------- */
+
+body.chud-targeting #board {
+  cursor: crosshair !important;
+}
+
+#chud-target-cursor {
+  position: fixed;
+  z-index: 100000;
+  pointer-events: none;
+  transform: translate(18px, 18px);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 10px;
+  background: rgba(12, 12, 16, 0.94);
+  border: 1px solid #e5233d;
+  box-shadow: 0 0 10px rgba(229, 35, 61, 0.55);
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+  font-family: "Tektur", "Jost", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e8e8ec;
+  white-space: nowrap;
+}
+
+#chud-target-cursor i {
+  color: #e5233d;
+  animation: chud-target-blink 0.9s steps(2, start) infinite;
+}
+
+@keyframes chud-target-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+/* --------------------------------------------------------------------------
    Scrollbars (WebKit)
    -------------------------------------------------------------------------- */
 

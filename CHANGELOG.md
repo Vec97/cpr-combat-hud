@@ -3,6 +3,12 @@
 All notable changes to **Cyberpunk RED - Combat HUD** are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.0] - 2026-07-04
+
+### Added
+- **Choose Target before attacking**: clicking Attack can now first enter a targeting mode - the cursor turns into a crosshair with a "Choose Target" label, and your next click on a token targets it before the roll (so the roll card and damage application key off that enemy). Right-click, Esc or clicking empty space cancels without rolling.
+- New per-user setting **Choose target before attacking** with three modes: *Always ask* (default), *Only when nothing is targeted*, and *Off*.
+
 ## [1.0.0] - 2026-07-04
 
 Initial public release.

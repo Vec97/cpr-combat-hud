@@ -13,6 +13,7 @@ import {
   AIMED_LOCATIONS,
 } from "./constants.js";
 import * as Actions from "./actions.js";
+import { isTargeting } from "./targeting.js";
 
 const WOUND_STATE_CSS = {
   notWounded: "ok",
@@ -394,6 +395,13 @@ export default class CPRCombatHUD extends Application {
   }
 
   async _onClick(event) {
+    // While a "Choose Target" session is open the bar is inert - swallow
+    // clicks so nothing fires until the user picks a target or cancels.
+    if (isTargeting()) {
+      event.preventDefault();
+      event.stopPropagation();
+      return;
+    }
     const el = event.target.closest("[data-action]");
     if (!el) return;
     event.preventDefault();
