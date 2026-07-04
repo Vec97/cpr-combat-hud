@@ -1,0 +1,7 @@
+# Normalise line endings: store everything as LF in the repo so the Linux
+# release runner never trips over CRLF in shell steps.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.webp binary
+*.ttf binary
