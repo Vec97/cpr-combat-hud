@@ -128,6 +128,11 @@ export async function rollAttack(event, actor, weaponId, tokenDoc) {
   if (!proceed) return;
   const fireMode = getFireMode(actor, weaponId);
   const cprRoll = weapon.createRoll(fireMode, actor);
+  // Carry the chosen aimed-shot location into the confirm dialog (the system's
+  // CPRAimedAttackRoll otherwise hard-defaults to "head").
+  if (fireMode === FIRE_MODES.AIMED) {
+    cprRoll.location = actor.getFlag(SYSTEM_ID, "aimedLocation") || "head";
+  }
   await executeCprRoll(event, actor, weapon, cprRoll, tokenDoc);
 }
 

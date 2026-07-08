@@ -155,7 +155,7 @@
 
 #cpr-combat-hud .chud-vitals {
   gap: 5px;
-  width: 280px;
+  width: 258px;
   flex-shrink: 0;
 }
 
@@ -247,17 +247,17 @@
 #cpr-combat-hud .chud-chips {
   display: flex;
   gap: 4px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 #cpr-combat-hud .chud-chip {
   display: flex;
   align-items: center;
-  gap: 3px;
-  padding: 2px 6px;
+  gap: 2px;
+  padding: 2px 5px;
   background: rgba(0, 0, 0, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 12px;
+  font-size: 11px;
   white-space: nowrap;
 }
 
@@ -350,7 +350,7 @@
 
 #cpr-combat-hud .chud-stats {
   display: grid;
-  grid-template-columns: repeat(5, 46px);
+  grid-template-columns: repeat(5, 42px);
   grid-auto-rows: 27px;
   gap: 3px;
   align-content: center;
@@ -389,8 +389,8 @@
    -------------------------------------------------------------------------- */
 
 #cpr-combat-hud .chud-weapons {
-  min-width: 260px;
-  max-width: 430px;
+  min-width: 250px;
+  max-width: 360px;
   flex: 1;
   gap: 3px;
 }
@@ -424,7 +424,7 @@
   display: flex;
   flex-direction: column;
   gap: 3px;
-  max-height: 66px;
+  max-height: 96px;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--chud-red-dim) transparent;
@@ -476,12 +476,16 @@
 #cpr-combat-hud .chud-weapon-buttons {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 3px;
+  row-gap: 3px;
   flex-shrink: 0;
+  max-width: 60%;
 }
 
 #cpr-combat-hud .chud-toggle {
-  padding: 3px 5px;
+  padding: 3px 4px;
   font-size: 10px;
   color: var(--chud-text-dim);
 }

@@ -3,6 +3,12 @@
 All notable changes to **Cyberpunk RED - Combat HUD** are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.2] - 2026-07-04
+
+### Fixed
+- **Aimed shot location** is now carried into the attack confirmation dialog. Previously the location you picked in the HUD (e.g. Held Item, Leg) was ignored and the dialog always reset to Head.
+- **Layout overflow** in the HUD bar: the vitals chips (armor / Humanity / LUCK / Death Save) no longer spill over the stats column, and a weapon's action buttons (fire modes / reload / ammo / ATK / DMG) stay inside the weapon row. The bar now packs onto a single row at 1280px-wide screens and wraps gracefully on narrower ones.
+
 ## [1.1.1] - 2026-07-04
 
 ### Added
