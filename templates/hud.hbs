@@ -122,6 +122,7 @@
         <button type="button" class="chud-btn chud-hp-btn" data-action="hp-delta" data-delta="5">+5</button>
       </div>
       <div class="chud-chips">
+        {{#if show.armor}}
         <div class="chud-chip {{#unless armor.head.has}}chud-chip-empty{{/unless}}" title="{{localize 'CPR-CHUD.bar.armorHead'}}">
           <i class="fa-solid fa-hard-hat"></i>
           {{#if armor.head.has}}
@@ -146,21 +147,28 @@
           <button type="button" class="chud-mini" data-action="armor-delta" data-location="shield" data-delta="1">+</button>
         </div>
         {{/if}}
+        {{/if}}
+        {{#if show.humanity}}
         <div class="chud-chip" title="{{localize 'CPR-CHUD.bar.humanity'}}">
           <i class="fa-solid fa-brain"></i>
           <span class="chud-chip-value">{{humanity.value}}<em>/{{humanity.max}}</em></span>
         </div>
+        {{/if}}
+        {{#if show.luck}}
         <div class="chud-chip" title="{{localize 'CPR-CHUD.bar.luck'}}">
           <i class="fa-solid fa-clover"></i>
           <button type="button" class="chud-mini" data-action="luck-delta" data-delta="-1">&minus;</button>
           <span class="chud-chip-value">{{luck.value}}<em>/{{luck.max}}</em></span>
           <button type="button" class="chud-mini" data-action="luck-delta" data-delta="1">+</button>
         </div>
+        {{/if}}
+        {{#if show.deathSave}}
         <div class="chud-chip chud-chip-death" data-action="deathsave-roll"
              title="{{localize 'CPR-CHUD.bar.deathSavePenalty'}}">
           <i class="fa-solid fa-skull"></i>
           <span class="chud-chip-value">{{deathSave.total}}</span>
         </div>
+        {{/if}}
       </div>
     </section>
 

@@ -3,6 +3,14 @@
 All notable changes to **Cyberpunk RED - Combat HUD** are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.3] - 2026-07-08
+
+### Changed
+- **Stat tiles** now stack the label above the value (centered), so the number no longer sits cramped against the abbreviation - much easier to read at a glance. The bar was rebalanced (slightly wider stats/weapons, tighter vitals) so everything still fits on one row.
+
+### Added
+- Per-user visibility toggles for the vitals chips: **Show armor (SP)**, **Show Humanity**, **Show LUCK**, **Show Death Save** (all on by default). Turn off what you don't want to see to declutter the bar.
+
 ## [1.1.2] - 2026-07-04
 
 ### Fixed

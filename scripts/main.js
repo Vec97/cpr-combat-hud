@@ -50,6 +50,18 @@ Hooks.once("init", () => {
     onChange: () => hud?.refresh(),
   });
 
+  for (const key of ["showArmor", "showHumanity", "showLuck", "showDeathSave"]) {
+    game.settings.register(MODULE_ID, key, {
+      name: `CPR-CHUD.settings.${key}.name`,
+      hint: `CPR-CHUD.settings.${key}.hint`,
+      scope: "client",
+      config: true,
+      type: Boolean,
+      default: true,
+      onChange: () => hud?.refresh(),
+    });
+  }
+
   game.settings.register(MODULE_ID, "targetMode", {
     name: "CPR-CHUD.settings.targetMode.name",
     hint: "CPR-CHUD.settings.targetMode.hint",

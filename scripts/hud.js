@@ -192,6 +192,14 @@ export default class CPRCombatHUD extends Application {
         has: actor.getEquippedArmors("shield").length > 0,
       },
     };
+
+    // Per-user visibility of the optional vitals chips.
+    data.show = {
+      armor: game.settings.get(MODULE_ID, "showArmor"),
+      humanity: game.settings.get(MODULE_ID, "showHumanity"),
+      luck: game.settings.get(MODULE_ID, "showLuck"),
+      deathSave: game.settings.get(MODULE_ID, "showDeathSave"),
+    };
   }
 
   _prepareStats(data, actor) {

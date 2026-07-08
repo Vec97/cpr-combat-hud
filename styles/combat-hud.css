@@ -155,7 +155,7 @@
 
 #cpr-combat-hud .chud-vitals {
   gap: 5px;
-  width: 258px;
+  width: 230px;
   flex-shrink: 0;
 }
 
@@ -350,8 +350,8 @@
 
 #cpr-combat-hud .chud-stats {
   display: grid;
-  grid-template-columns: repeat(5, 42px);
-  grid-auto-rows: 27px;
+  grid-template-columns: repeat(5, 44px);
+  grid-auto-rows: 30px;
   gap: 3px;
   align-content: center;
   flex-shrink: 0;
@@ -359,9 +359,11 @@
 
 #cpr-combat-hud .chud-stat {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 5px;
+  justify-content: center;
+  gap: 1px;
+  padding: 1px 2px;
   background: rgba(0, 0, 0, 0.45);
   clip-path: polygon(4px 0, 100% 0, 100% calc(100% - 4px), calc(100% - 4px) 100%, 0 100%, 0 4px);
 }
@@ -371,17 +373,19 @@
 }
 
 #cpr-combat-hud .chud-stat-label {
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 600;
   color: var(--chud-text-dim);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.06em;
+  line-height: 1;
 }
 
 #cpr-combat-hud .chud-stat-value {
   font-family: "Tektur", "Jost", sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--chud-cyan);
+  line-height: 1;
 }
 
 /* --------------------------------------------------------------------------
